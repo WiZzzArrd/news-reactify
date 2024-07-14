@@ -5,8 +5,6 @@ export default function Categories({
   setSelectedCategory,
   selectedCategory,
 }) {
-  console.log(categories, selectedCategory);
-
   return (
     <div className={style.categories}>
       {categories.map((category) => {

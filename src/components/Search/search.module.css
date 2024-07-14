@@ -1,0 +1,21 @@
+.search {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  gap: 12px;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c1c2c3;
+  border-radius: 12px;
+}
+
+.cancel {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  cursor: pointer;
+}
