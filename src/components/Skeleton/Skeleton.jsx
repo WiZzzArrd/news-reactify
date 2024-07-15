@@ -1,10 +1,16 @@
 import style from "./skeleton.module.css";
 
-export default function Skeleton({ count = 1, type = "banner" }) {
+export default function Skeleton({
+  count = 1,
+  type = "banner",
+  direction = "column",
+}) {
   return (
     <>
       {count > 1 ? (
-        <ul className={style.list}>
+        <ul
+          className={direction === "column" ? style.columnList : style.rowList}
+        >
           {[...Array(count)].map((_, index) => {
             return (
               <li
