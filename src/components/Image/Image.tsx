@@ -1,7 +1,10 @@
-import React from "react";
 import style from "./image.module.css";
 
-export default function Image({ image }) {
+interface Props {
+  image: string;
+}
+
+export default function Image({ image }: Props) {
   return (
     <div className={style.wrapper}>
       {image ? <img className={style.image} src={image} alt='news' /> : null}

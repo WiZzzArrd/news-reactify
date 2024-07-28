@@ -1,5 +1,5 @@
-import React from "react";
 import style from "./pagination.module.css";
+import { IPaginationProps } from "../../interfaces/interfaces";
 
 export default function Pagination({
   totalPages,
@@ -7,7 +7,7 @@ export default function Pagination({
   handleNextPage,
   handlePrevPage,
   handlePageClick,
-}) {
+}: IPaginationProps) {
   return (
     <div className={style.pagination}>
       <button
