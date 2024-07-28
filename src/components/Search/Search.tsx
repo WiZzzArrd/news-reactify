@@ -1,7 +1,11 @@
-import React from "react";
 import style from "./search.module.css";
 
-export default function Search({ keywords, setKeywords }) {
+interface Props {
+  keywords: string;
+  setKeywords: (keywords: string) => void;
+}
+
+export default function Search({ keywords, setKeywords }: Props) {
   const cleanValueHandler = () => {
     setKeywords("");
   };

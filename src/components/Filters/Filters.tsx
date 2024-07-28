@@ -1,13 +1,20 @@
 import { getCategories } from "../../api/apiNews";
 import useFetch from "../../helpers/hooks/useFetch";
-import Categories from "../../components/Categories/Categories";
-import Search from "../../components/Search/Search";
+import Categories from "../Categories/Categories";
+import Search from "../Search/Search";
 import style from "./style.module.css";
 import Slider from "../Slider/Slider";
+import { CategoriesApiResponse, IFilters } from "../../interfaces/interfaces";
 
-export default function Filters({ filters, changeFilter }) {
-  const { data: dataCategories, isLoading: isCategoriesLoading } =
-    useFetch(getCategories);
+interface Props {
+  filters: IFilters;
+  changeFilter: (key: string, value: string | number | null) => void;
+}
+
+export default function Filters({ filters, changeFilter }: Props) {
+  const { data: dataCategories } = useFetch<CategoriesApiResponse, null>(
+    getCategories
+  );
 
   return (
     <div className={style.filters}>
