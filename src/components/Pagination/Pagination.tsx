@@ -1,5 +1,6 @@
 import style from "./pagination.module.css";
 import { IPaginationProps } from "../../interfaces/interfaces";
+import { useTheme } from "../../context/ThemeContext";
 
 export default function Pagination({
   totalPages,
@@ -8,8 +9,10 @@ export default function Pagination({
   handlePrevPage,
   handlePageClick,
 }: IPaginationProps) {
+  const { isDark } = useTheme();
+
   return (
-    <div className={style.pagination}>
+    <div className={`${style.pagination} ${isDark ? style.dark : style.light}`}>
       <button
         onClick={handlePrevPage}
         className={style.arrow}
