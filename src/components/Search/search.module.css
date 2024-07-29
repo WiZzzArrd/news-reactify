@@ -19,3 +19,11 @@
   right: 10px;
   cursor: pointer;
 }
+
+.dark {
+  background-color: #23272f;
+}
+
+.light {
+  background-color: white;
+}
