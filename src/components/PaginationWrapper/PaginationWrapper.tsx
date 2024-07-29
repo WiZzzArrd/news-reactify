@@ -10,6 +10,7 @@ interface Props {
 
 export default function PaginationWrapper({
   top,
+
   bottom,
   children,
   ...paginationProps
