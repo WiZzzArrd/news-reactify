@@ -4,7 +4,7 @@ import { useTheme } from "@/app/providers/ThemeProvider";
 
 interface Props {
   children: React.ReactElement;
-  step: number | undefined;
+  step?: number | undefined;
 }
 
 export default function Slider({ children, step = 150 }: Props) {
